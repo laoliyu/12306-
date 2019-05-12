@@ -13,8 +13,8 @@ Page({
       '/images/haibao/1.jpg',
       '/images/haibao/2.jpg',
       '/images/haibao/3.jpg'
-    ]
-
+    ],
+    currentTab: 0
   },
 
   /**
@@ -26,6 +26,17 @@ Page({
   switchNav: function (e) {
     var id = e.currentTarget.id;
     this.setData({
-      currentTab: id });
+      currentTab: id
+    });
+  },
+  formSubmit: function (e) {
+    console.log(e);
+    var startStation = e.detail.value.startStation;//出发站
+    var endStation = e.detail.value.endStation;//终点站
+    var date = e.detail.value.date;//日期：2月2日
+    var week = e.detail.value.week;//星期：周四
+    wx.navigateTo({
+      url: '../trainList/trainList?startStation=' + startStation + "&endStation=" + endStation + "&date=" + date + "&week=" + week
+    })
   }
 })

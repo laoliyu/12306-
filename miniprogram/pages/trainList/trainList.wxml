@@ -1,2 +1,48 @@
-<!--miniprogram/pages/trainList/trainList.wxml-->
-<text>miniprogram/pages/trainList/trainList.wxml</text>
+<!-- miniprogram/pages/trainList/trainList.wxml -->
+<view class="date">
+    <view>前一天</view>
+    <!-- <view >{{date}}</view> -->
+    <view>2月2日</view>
+    <view>后一天</view>
+</view>
+<!-- 火车票的信息 -->
+<view class="content" style="height:{{winHeight}}px">
+ 
+    <view class="bg">
+        <view class="item">
+            <view class="wrApper left">
+            <view class="normal">{{item.startStation}}</view>
+            <view class="blue">{{item.start_time}}</view>
+        </view>
+        <view class="wrApper center">
+            <view class="normal">{{item.from_station_code}}</view>
+            <view class="line"></view>
+            <view class="small">{{item.run_time}}</view>
+        </view>
+        <view class="wrApper right">
+            <view class="normal">{{item.endStation}}</view>
+            <view class="normal">{{item.arrive_time}}</view>
+        </view>
+        <view class="wrApper right">
+            <view class="blue">{{item.price}}起</view>
+            <view class="buy">可抢票</view>
+        </view>
+    </view>
+    <view class="hr"></view>
+<view class="seat">
+  
+        <view class="yes">
+            一等座：10张
+            <text>(抢)</text>
+        </view>
+        <view class="no">
+            二等座：0张
+            <text>(抢)</text>
+        </view>
+        </view>
+   </view>
+</view>
+
+
+
+

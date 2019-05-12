@@ -1,9 +1,9 @@
 {
   "pages": [
     "pages/train/train",
+    "pages/airplane/airplane",
     "pages/bus/bus",
     "pages/mycenter/mycenter",
-    "pages/airplane/airplane",
     "pages/trainList/trainList",
     "pages/grabticket/grabticket"
   ],

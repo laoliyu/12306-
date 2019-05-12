@@ -2,9 +2,9 @@
 <!-- 上面的轮播图 -->
 <view class="haibao">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:80px">
-        <block wx:for="{{imgUrls}}">
+        <block wx:for="{{imgUrls}}"wx:key="{{}}">
             <swiper-item>
-                <image  src="{{item}}" style="width:100%;height:80px;" />
+                <image src="{{item}}" style="width:100%;height:80px;" />
             </swiper-item>
         </block>
     </swiper>
@@ -21,7 +21,7 @@
     <form bindsubmit="formSubmit">
         <view class="station">
             <view>
-                <input name="startStation" value="哈尔滨" />
+                <input name="startStation" value="上海虹桥" />
             </view>
             <view>
                 <image src="../../images/icon/hcp/xz.png" style="width:44px;height:45px;" />
@@ -35,11 +35,13 @@
             <view>
                 <input name="date" value="2月2日" />
             </view>
-            <view></view>
             <view>
                 <text style="color:#5495E6;">
-                    <input name="week" value="2月2日" />
+                    <input name="week" value="星期四" />
                 </text>
+                <button id="xy">
+                    <image src="../../images/icon/hcp/1.png" style="width:30px;height:30px;" />
+                </button>
             </view>
         </view>
         <view class="hr"></view>
@@ -53,11 +55,38 @@
                 <switch name="xs" type="switch" />
             </view>
         </view>
-        <button class="btn" fromType="submit">查询</button>
+        <button class="btn" formType="submit">查询</button>
         <view class="record">
             <text>北京——> 佳木斯</text>
             <text>佳木斯——> 北京</text>
             <text>清除历史</text>
         </view>
     </form>
+</view>
+<!-- 抢票的4个图片 -->
+<view class="icon">
+    <view class="item">
+        <view>
+            <image src="../../images/icon/hcp/jsqp.png" style="width:40px;height:40px" />
+        </view>
+        <view class="menu">急速抢票</view>
+    </view>
+    <view class="item">
+        <view>
+            <image src="../../images/icon/hcp/zxxz.png" style="width:40px;height:40px" />
+        </view>
+        <view class="menu">在线选座</view>
+    </view>
+    <view class="item">
+        <view>
+            <image src="../../images/icon/hcp/qshh.png" style="width:40px;height:40px" />
+        </view>
+        <view class="menu">抢手好货</view>
+    </view>
+    <view class="item">
+        <view>
+            <image src="../../images/icon/hcp/czjd.png" style="width:40px;height:40px" />
+        </view>
+        <view class="menu">超值酒店</view>
+    </view>
 </view>
